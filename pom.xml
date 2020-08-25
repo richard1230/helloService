@@ -24,22 +24,7 @@
 <!--        </repositories>-->
 <!--    </profile>-->
 <!--</profiles>-->
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.apache.servicecomb/solution-basic -->
-        <dependency>
-            <groupId>org.apache.servicecomb</groupId>
-            <artifactId>solution-basic</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.servicecomb/java-chassis-dependencies -->
-        <dependency>
-            <groupId>org.apache.servicecomb</groupId>
-            <artifactId>java-chassis-dependencies</artifactId>
-            <version>2.0.0</version>
-            <type>pom</type>
-        </dependency>
 
-    </dependencies>
 
     <build>
         <plugins>
@@ -57,16 +42,24 @@
         </plugins>
     </build>
 
-<!--    <dependencyManagement>-->
-<!--        <dependencies>-->
-<!--            <dependency>-->
-<!--                <groupId>org.apache.servicecomb</groupId>-->
-<!--                <artifactId>java-chassis-dependencies</artifactId>-->
-<!--                <version>${java-chassis-dependencies.version}</version>-->
-<!--                <type>pom</type>-->
-<!--                <scope>import</scope>-->
-<!--            </dependency>-->
-<!--        </dependencies>-->
-<!--    </dependencyManagement>-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.servicecomb</groupId>
+                <artifactId>java-chassis-dependencies</artifactId>
+                <version>${java-chassis-dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.servicecomb/solution-basic -->
+        <dependency>
+            <groupId>org.apache.servicecomb</groupId>
+            <artifactId>solution-basic</artifactId>
+<!--            <version>2.0.0</version>-->
+        </dependency>
+    </dependencies>
 
 </project>
